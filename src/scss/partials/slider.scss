@@ -1,0 +1,224 @@
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    // a trick for validator
+    &_title {
+        display: none;
+    }
+
+    &_slider {
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+       
+    }
+
+
+    &_slide {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-shrink: 0;
+        transition: all .3s ease-in-out;
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.7);
+            z-index: 1;
+        }
+
+        &-desc {
+            margin: auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 590px;
+        }
+
+        &-subtitle  {
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+    
+        &-title {
+            color: #fff;
+            font-family: "Raleway", sans-serif;
+            font-size: 3.25rem;
+            font-weight: 800;
+            margin-bottom: 19px;
+        }
+        
+        &-text {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+    }
+
+    #slide1 {
+        background: url('../img/main_bg1.jpg') center top no-repeat;
+        background-size: cover;
+    }
+    #slide2 {
+        background: url('../img/main_bg2.jpg') center top no-repeat;
+        background-size: cover;
+    }
+    #slide3 {
+        background: url('../img/main_bg3.jpg') center top no-repeat;
+        background-size: cover;
+    }
+    #slide4 {
+        background: url('../img/main_bg4.jpg') center top no-repeat;
+        background-size: cover;
+    }
+    #slide5 {
+        background: url('../img/main_bg5.jpg') center top no-repeat;
+        background-size: cover;
+    }
+
+    label.control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 73px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.1;
+        
+        &.next {
+            right: 150px;
+            background: url('../img/next.png');
+        }
+
+        &.prev {
+            left: 150px;
+            background: url('../img/prev.png');
+        }
+
+
+    }
+
+    // for controls prev
+    // #switch1:checked ~ .controls label.prev[for="switch5"],  // uncomment above for infinite 
+    #switch2:checked ~ .controls label.prev[for="switch1"],
+    #switch3:checked ~ .controls label.prev[for="switch2"],
+    #switch4:checked ~ .controls label.prev[for="switch3"], 
+    #switch5:checked ~ .controls label.prev[for="switch4"],
+    // for controls next
+    // #switch5:checked ~ .controls label.next[for="switch1"], // uncomment for infinite
+    #switch1:checked ~ .controls label.next[for="switch2"],
+    #switch2:checked ~ .controls label.next[for="switch3"],
+    #switch3:checked ~ .controls label.next[for="switch4"],
+    #switch4:checked ~ .controls label.next[for="switch5"] {
+        cursor: pointer;
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    // for slides
+    #switch1:checked ~ .hero_slider #slide1{
+        margin-left: 0;
+    }
+    #switch2:checked ~ .hero_slider #slide1{
+        margin-left: -100%;
+    }
+    #switch3:checked ~ .hero_slider #slide1{
+        margin-left: -200%;
+    }
+    #switch4:checked ~ .hero_slider #slide1{
+        margin-left: -300%;
+    }
+    #switch5:checked ~ .hero_slider #slide1{
+        margin-left: -400%;
+    }
+
+    .active {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        z-index: 2;
+        
+        label {
+            position: relative;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 8px;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+
+            &:before {
+                width: 11px;
+                height: 11px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            &:after {
+                width: 100%;
+                height: 100%;
+                border: 2px solid #d3c1ad;
+                display: none;
+            }
+
+            &:hover:after {
+                display: block;
+            }
+        }
+        
+    }
+
+    
+    // for active radio buttons
+    #switch1:checked ~ .active label[for="switch1"],
+    #switch2:checked ~ .active label[for="switch2"],
+    #switch3:checked ~ .active label[for="switch3"],
+    #switch4:checked ~ .active label[for="switch4"],
+    #switch5:checked ~ .active label[for="switch5"] {
+        
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display: block;
+        }
+    }
+
+     [type="radio"] {
+        order: 3;
+        display: none;
+    }
+}
+

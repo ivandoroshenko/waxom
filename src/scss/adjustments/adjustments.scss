@@ -1,0 +1,45 @@
+body {
+    font-size: 16px;
+    font-family: 'Montserat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+}
+
+.btn {
+    box-shadow: inset 0 -3px 0 #736357;
+    border: none;
+    border-radius: 3px;
+    background-color: #998675;
+    box-shadow: 0 3px 0 #736357;
+    padding: 21px 38px;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,90 @@
+.ideas {
+    background-color: #fbfaf8;
+    padding-top: 83px;
+    
+    .container {
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    &_title {
+        color: #555;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    &_text {
+        color: #8c8c8c;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.75rem;
+        width: 66%;
+        margin-bottom: 0;
+    }
+    &_slider-wrap {
+        width: 100%;
+
+        input[type="radio"] {
+            display: none;
+        }
+    }
+
+    &_slider {
+        display: flex;
+        position: relative;
+        padding: 82px 0 482px;
+        width: 100%;
+    }
+
+    &_slide {
+        position: absolute;
+        transition: all .5s ease-in-out;
+        z-index: 1;
+        max-height: 400px;
+        width: auto;
+        overflow: hidden;
+        
+
+        &:hover {
+           filter: grayscale(1)
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    #ideas_switch1:checked ~ .ideas_slider .ideas_slide:nth-child(1), 
+    #ideas_switch2:checked ~ .ideas_slider .ideas_slide:nth-child(2), 
+    #ideas_switch3:checked ~ .ideas_slider .ideas_slide:nth-child(3) {
+        z-index: 2;
+        margin-top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 482px;
+        
+    }
+
+    #ideas_switch1:checked ~ .ideas_slider .ideas_slide:nth-child(3), 
+    #ideas_switch2:checked ~ .ideas_slider .ideas_slide:nth-child(1), 
+    #ideas_switch3:checked ~ .ideas_slider .ideas_slide:nth-child(2) {
+        margin-top: 82px;
+        left: 0;
+        transform: translateX(0);
+       
+    }
+
+    #ideas_switch1:checked ~ .ideas_slider .ideas_slide:nth-child(2), 
+    #ideas_switch2:checked ~ .ideas_slider .ideas_slide:nth-child(3), 
+    #ideas_switch3:checked ~ .ideas_slider .ideas_slide:nth-child(1) {
+        margin-top: 82px;
+        right: 0;
+        transform: translateX(0);
+    }
+}

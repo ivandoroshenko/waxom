@@ -1,0 +1,37 @@
+.footer {
+    background-color: #111;
+    padding: 45px 0 52px;
+
+    .container {
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+    }
+    
+    &_copy-item,
+    &_design-item {
+        border-right: 1px solid #555;
+        color: #555;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.813rem;
+        font-weight: 300;
+        line-height: 1;
+        padding: 0 10px;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        .pale {
+            color: #959595;
+        }
+
+        .faq-pale {
+            color: #c7b299;
+        }
+        
+    }
+    
+}

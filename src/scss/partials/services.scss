@@ -1,0 +1,43 @@
+.services {
+    padding: 89px 80px;
+
+    .container {
+        justify-content: space-between;
+    }
+
+    &_card {
+        text-align: center;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 70px;
+            height: 3px;
+            background-color: #f1eee9;
+            display: inline-block;
+        }
+
+        &.active:after {
+            background-color: #c7b299;
+        }
+
+        &-icon {
+            margin-bottom: 29px;
+        }
+
+        &-title {
+            color: #555;
+            font-family: 'Raleway';
+            font-size: 1.375rem;
+            font-weight: 600;
+        }
+
+        &-text {
+            color: #8c8c8c;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.5rem;
+        }
+    }
+}

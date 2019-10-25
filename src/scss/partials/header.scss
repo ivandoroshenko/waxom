@@ -1,0 +1,113 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding-top: 40px;
+
+    .container {
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    &_logo {
+        margin-right: auto;
+    }
+
+    .nav {
+        margin-right: 63px;
+
+        &_list {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+    
+        &_item {
+            margin-right: 30px;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+        &_link {
+            text-decoration: none;
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 0.875rem;
+            font-weight: 300;
+    
+            &:hover,
+            &:focus {
+            color: #c7b299;
+            }
+        }
+        
+    }
+
+   
+
+    form.search {
+        position: relative;
+
+        .submit {
+            display: block;
+            background: url(../img/search.png) center center no-repeat;
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+            border: none;
+            cursor: pointer;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+
+       
+
+        input[type="search"] {
+            position: absolute;
+            right: 40px;
+            width: 0;
+            padding: 0px;
+            height: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .5s ease-in-out;
+            border: none;
+            background-color: #998675;
+            border-radius: 3px;
+            color: #fff;
+            box-shadow: 0 3px 0 #736357;
+
+            &:focus {
+                display: block;
+                width: 300px;
+                padding: 10px;
+                min-height: 30px;
+                padding: 20px 20px 20px 20px;
+                outline: #fff;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            input[type="search"] {
+                display: block;
+                width: 300px;
+                padding: 20px 20px 20px 20px;
+                min-height: 30px;
+            }
+        }
+    
+
+    }
+
+    .basket {
+        margin-right: 28px;
+    }
+}
