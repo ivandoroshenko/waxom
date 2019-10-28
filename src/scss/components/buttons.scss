@@ -1,0 +1,23 @@
+.button_up {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    background-color: #998675;
+    border-radius: 3px;
+    display: flex;
+    transition: all .3s ease-in-out;
+
+    svg {
+        fill: #fff;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+    }
+
+    &:hover {
+        transform: translateY(-5px) scale(1.1);
+    }
+}

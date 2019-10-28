@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    z-index: 2;
     // a trick for validator
     &_title {
         display: none;

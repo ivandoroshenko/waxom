@@ -20,6 +20,16 @@
         line-height: 1;
         padding: 0 10px;
 
+        a {
+            color: #555;
+            text-decoration: none;
+            transition: color .3s ease-in-out;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
         &:last-child {
             border-right: none;
         }
