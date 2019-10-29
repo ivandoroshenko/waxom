@@ -35,6 +35,7 @@
         &:last-child {
             margin-right: 0;
         }
+
     }
 
     label {
@@ -50,6 +51,11 @@
         box-sizing: border-box;
         cursor: pointer;
         transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: rgba(153, 134, 117, 0.8);
+            color: #fff;
+        }
 
     }
 
@@ -165,11 +171,16 @@
                
             }
 
+            &:focus {
+                right: 50%;
+            }
+
         }
 
 
-
-        &:hover {
+        // top:hover
+        &:hover,
+        &:focus {
 
             .projects_item-img {
                 transform: scale(1.1) rotate(2deg);
@@ -185,7 +196,9 @@
            
         }
 
-        &:hover+.projects_item-desc {
+        //top hover
+        &:hover+.projects_item-desc, 
+        &:focus+.projects_item-desc {
             background-color: #362f2d;
 
             &:before {

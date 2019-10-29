@@ -18,6 +18,29 @@
                 <ul class="nav_list">
                     <li class="nav_item">
                         <a href="#" class="nav_link">Home</a>
+                        <ul class="dropdown_menu">
+                            <li class="dropdown_menu-item">
+                                <a href="#">Portfolio Revolution Slider</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Portfolio Veented Slider</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Portfolio Hero Video</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Portfolio One Pager</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Business Revolution Slider</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Business White Header</a>
+                            </li>
+                            <li class="dropdown_menu-item">
+                                <a href="#">Business Veented Slider</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav_item">
                         <a href="#" class="nav_link">About Us</a>
@@ -42,9 +65,18 @@
                     </li>
                 </ul>
             </nav>
-            <a href="#" class="basket">
-                <img src="./img/basket.png" alt="" class="basket_icon">
-            </a>
+            <div class="basket">
+                <input type="checkbox" name="basketSwitch" id="basketSwitch">
+                <label class="basket_open" for="basketSwitch">
+                    <img src="./img/basket.png" alt="" class="basket_icon">
+                </label>
+                <div class="basket_content">
+                    <label for="basketSwitch" class="basket_close"></label>
+                    <ul class="basket_content-list">
+                        <li class="empty">No products in the card.</li>
+                    </ul>
+                </div>
+            </div>
             <form action="#" class="search">
                 <input type="search" name="search" id="search" placeholder="type your request here" autocomplete="false">
                 <button class="submit"></button>
@@ -213,31 +245,31 @@
             <input type="radio" class="projects_tab" name="projects_tab" id="illustration">
             <input type="radio" class="projects_tab" name="projects_tab" id="photo">
             <ul class="projects_tabs-list">
-                <li class="projects_tabs-item">
+                <li class="projects_tabs-item" tabindex="1">
                     <label for="projectsAll" class="projects_tabs-label">All</label>
                 </li>
-                <li class="projects_tabs-item">
+                <li class="projects_tabs-item" tabindex="1">
                     <label for="webDesign" class="projects_tabs-label">Web Design</label>
                 </li>
-                <li class="projects_tabs-item">
+                <li class="projects_tabs-item" tabindex="1">
                     <label for="mobileApp" class="projects_tabs-label">Mobile App</label>
                 </li>
-                <li class="projects_tabs-item">
+                <li class="projects_tabs-item" tabindex="1">
                     <label for="illustration" class="projects_tabs-label">Illustration</label>
                 </li>
-                <li class="projects_tabs-item">
+                <li class="projects_tabs-item" tabindex="1">
                     <label for="photo" class="projects_tabs-label">Photography</label>
                 </li>
             </ul>
             <ul class="projects_list">
                 <li class="projects_item filter_photo filter_app">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/phone.jpg" alt="phone.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -249,13 +281,13 @@
                 </li>
 
                 <li class="projects_item filter_design">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/mountain1.jpg" alt="mountain1.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -267,13 +299,13 @@
                 </li>
 
                 <li class="projects_item filter_photo filter_illustration">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/book1.jpg" alt="book1.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -285,13 +317,13 @@
                 </li>
 
                 <li class="projects_item filter_photo">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/green-mountain.jpg" alt="green-mountain.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -304,13 +336,13 @@
                 </li>
 
                 <li class="projects_item filter_design filter_illustration">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/book2.jpg" alt="book2.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -322,13 +354,13 @@
                 </li>
 
                 <li class="projects_item filter_photo filter_photo">
-                    <div class="projects_item-top">
+                    <div class="projects_item-top" tabindex="1">
                         <img src="./img/mountain-water.jpg" alt="mountain-water.jpg" class="projects_item-img">
                         <div class="icons">
-                            <a rel="nofollow" href="#" class="projects_add_to_cart">
+                            <a rel="nofollow" href="#" class="projects_add_to_cart" tabindex="-1">
                                 <img src="./img/add_to_cart.png" alt="add_to_cart.png">
                             </a>
-                            <a rel="nofollow" href="#search" class="projects_search">
+                            <a rel="nofollow" href="#search" class="projects_search" tabindex="-1">
                                 <img src="./img/project_search.png" alt="project_search.png">
                             </a>
                         </div>
@@ -392,6 +424,7 @@
         </ul>
     </div>
 </footer>
+<!-- Button Up -->
 <a class="button_up" rel="nofollow" href="#header">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
